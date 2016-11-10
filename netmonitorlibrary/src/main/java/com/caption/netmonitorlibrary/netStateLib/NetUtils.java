@@ -1,4 +1,4 @@
-package com.deng.netmonitor.netStateLib;
+package com.caption.netmonitorlibrary.netStateLib;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

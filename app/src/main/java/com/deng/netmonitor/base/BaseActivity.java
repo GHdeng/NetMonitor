@@ -4,9 +4,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-import com.deng.netmonitor.netStateLib.NetChangeObserver;
-import com.deng.netmonitor.netStateLib.NetStateReceiver;
-import com.deng.netmonitor.netStateLib.NetUtils;
+import com.caption.netmonitorlibrary.netStateLib.NetChangeObserver;
+import com.caption.netmonitorlibrary.netStateLib.NetStateReceiver;
+import com.caption.netmonitorlibrary.netStateLib.NetUtils;
 
 /**
  * Created by deng on 2016/9/30.

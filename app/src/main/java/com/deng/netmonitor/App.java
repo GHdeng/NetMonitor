@@ -2,7 +2,7 @@ package com.deng.netmonitor;
 
 import android.app.Application;
 
-import com.deng.netmonitor.netStateLib.NetStateReceiver;
+import com.caption.netmonitorlibrary.netStateLib.NetStateReceiver;
 
 /**
  * Created by deng on 2016/9/30.

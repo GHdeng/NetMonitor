@@ -1,4 +1,4 @@
-package com.deng.netmonitor.netStateLib;
+package com.caption.netmonitorlibrary.netStateLib;
 
 /**
  * 网络改变观察者，观察网络改变后回调的方法
