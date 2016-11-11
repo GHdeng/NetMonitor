@@ -330,3 +330,18 @@ public class NetUtils {
 		             NetStateReceiver.removeRegisterObserver(mNetChangeObserver);
     }
 ```
+# Use
+##### Maven
+```java
+<dependency>
+  <groupId>com.caption</groupId>
+  <artifactId>netmonitorlibrary</artifactId>
+  <version>1.0.0</version>
+  <type>pom</type>
+</dependency>
+```
+
+##### Gradle
+```java
+compile 'com.caption:netmonitorlibrary:1.0.0'
+```
