@@ -286,6 +286,7 @@ public class NetUtils {
 ```
 
 #####5.为了监听每一个Activity就抽取出来一个抽象类
+
 ```
 	/**
      * 网络观察者
@@ -330,6 +331,7 @@ public class NetUtils {
 		             NetStateReceiver.removeRegisterObserver(mNetChangeObserver);
     }
 ```
+
 # Use
 ##### Maven
 ```java
