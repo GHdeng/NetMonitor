@@ -287,11 +287,11 @@ public class NetUtils {
 
 #####5.为了监听每一个Activity就抽取出来一个抽象类
 
-```
-	/**
-     * 网络观察者
-     */
-    protected NetChangeObserver mNetChangeObserver = null;
+```java	
+/**
+* 网络观察者
+*/
+protected NetChangeObserver mNetChangeObserver = null;
 
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
