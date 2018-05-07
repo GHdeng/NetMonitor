@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import com.deng.netmonitor.R;
 import com.deng.netmonitor.base.BaseActivity;
-import com.caption.netmonitorlibrary.netStateLib.NetUtils;
+import com.caption.netmonitorlibrary.netstatelib.NetUtils;
 
 public class MainActivity extends BaseActivity {
 

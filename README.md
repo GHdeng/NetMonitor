@@ -2,26 +2,26 @@
 
 # 使用广播监听网络变化
 
-###需求确认
+### 需求确认
 
 * 监听当前网络的状态和类型
 * 类似京东客户端，当网络发生变化时相应更新UI界面
 
 ![image](https://raw.githubusercontent.com/GHdeng/NetMonitor/master/NetMonitor2.gif)
 
-github地址：https://github.com/GHdeng/NetMonitor
+GitHub 地址：https://github.com/GHdeng/NetMonitor
 
-###制作流程
+### 制作流程
 1. 使用广播监听当前网络的状态。
 2. 配合Application周期注册监听，使得每个界面都继续监听
 3. 抽出BaseActivity类实现回调
 
-#####1.继承BroadcastReceiver实现onReceive方法来判断当前网络是否连接，然后通过更新NetChangeObserver来实现回调。
+##### 1.继承BroadcastReceiver实现onReceive方法来判断当前网络是否连接，然后通过更新NetChangeObserver来实现回调。
 加入权限
 ```java
-< uses-permission android:name="android.permission.INTERNET" />
-< uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> 
-< uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 ```java
 /**
@@ -156,7 +156,7 @@ public class NetStateReceiver extends BroadcastReceiver {
 }
 ```
 
-#####2.回调接口
+##### 2.回调接口
 ``` java
 /**
  * 网络改变观察者，观察网络改变后回调的方法
@@ -176,7 +176,7 @@ public interface NetChangeObserver {
 }
 ```
 
-#####3.网络状态工具类
+##### 3.网络状态工具类
 ```java
 public class NetUtils {
 
@@ -250,6 +250,9 @@ public class NetUtils {
         int nType = networkInfo.getType();
 
         if (nType == ConnectivityManager.TYPE_MOBILE) {
+            if (TextUtils.isEmpty(networkInfo.getExtraInfo())) {
+                return NetType.NONE;
+            }
             if (networkInfo.getExtraInfo().toLowerCase(Locale.getDefault()).equals("cmnet")) {
                 return NetType.CMNET;
             } else {
@@ -263,7 +266,7 @@ public class NetUtils {
 }
 ```
 
-#####4.在Application中注册
+##### 4.在Application中注册
 ```java
     @Override
     public void onCreate() {
@@ -285,7 +288,7 @@ public class NetUtils {
     }
 ```
 
-#####5.为了监听每一个Activity就抽取出来一个抽象类
+##### 5.为了监听每一个Activity就抽取出来一个抽象类
 
 ```java	
 /**

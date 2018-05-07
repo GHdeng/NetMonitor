@@ -1,8 +1,9 @@
-package com.caption.netmonitorlibrary.netStateLib;
+package com.caption.netmonitorlibrary.netstatelib;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.text.TextUtils;
 
 import java.util.Locale;
 
@@ -82,6 +83,9 @@ public class NetUtils {
         int nType = networkInfo.getType();
 
         if (nType == ConnectivityManager.TYPE_MOBILE) {
+            if (TextUtils.isEmpty(networkInfo.getExtraInfo())) {
+                return NetType.NONE;
+            }
             if (networkInfo.getExtraInfo().toLowerCase(Locale.getDefault()).equals("cmnet")) {
                 return NetType.CMNET;
             } else {

@@ -1,4 +1,4 @@
-package com.caption.netmonitorlibrary.netStateLib;
+package com.caption.netmonitorlibrary.netstatelib;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
